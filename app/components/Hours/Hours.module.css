@@ -1,0 +1,57 @@
+.hoursSection {
+    background-color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.title {
+    color: #ff0000;
+    font-size: 5rem;
+    margin-bottom: 2.5rem;
+    font-family: Updock;
+    font-weight: 700;
+}
+
+.hoursContainer {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dayRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    font-family: 'Lato', sans-serif;
+}
+
+.dayRow:last-child {
+    border-bottom: none;
+}
+
+.day {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.hours {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.closed {
+    color: #ff0000;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .day, .hours {
+        font-size: 1.1rem;
+    }
+}

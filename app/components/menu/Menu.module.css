@@ -1,0 +1,165 @@
+.menu {
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    position: relative;
+}
+
+.title {
+    font-family: 'Updock', cursive;
+    font-size: 7rem;
+    color: #ff0000;
+    margin-left: 10rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.menuSection {
+    padding: 0 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.menuContent {
+    width: 50%;
+}
+
+.menuItem {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.menuItemExtra {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.timeInfo {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 3rem;
+}
+
+.time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-left: 7rem;
+}
+
+.pizzaImage {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 3rem;
+    margin-top: -6rem;
+    transition: transform 0.5s ease;
+}
+
+.pizzaImage:hover {
+    transform: rotate(10deg) scale(1.05);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .title {
+        font-size: 5rem;
+        margin-left: 5rem;
+        text-align: center;
+    }
+
+    .pizzaImage {
+        width: 400px;
+        height: 400px;
+        margin-top: -3rem;
+    }
+
+    .menuItem {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        padding: 2rem 1rem;
+    }
+
+    .title {
+        font-size: 4rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .menuSection {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .menuContent {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .menuItem {
+        font-size: 1.3rem;
+    }
+
+    .menuItemExtra {
+        font-size: 1rem;
+    }
+
+    .timeInfo {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+
+    .time {
+        font-size: 1.2rem;
+        margin-left: 3rem;
+    }
+
+    .pizzaImage {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 3.5rem;
+        margin-left: 1rem;
+    }
+
+    .menuItem {
+        font-size: 1.1rem;
+    }
+
+    .menuItemExtra {
+        font-size: 0.9rem;
+    }
+
+    .timeInfo, .time {
+        font-size: 1rem;
+    }
+
+    .time {
+        margin-left: 2rem;
+    }
+
+    .pizzaImage {
+        width: 250px;
+        height: 250px;
+    }
+}

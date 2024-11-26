@@ -1,6 +1,29 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Montserrat, Poppins, Playfair_Display, Lato, Updock } from 'next/font/google';
 import "./globals.css";
+
+const montserrat = Montserrat({ 
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+});
+
+const poppins = Poppins({
+  weight: ['400', '500', '600'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+});
+
+const lato = Lato({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-lato',
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -11,6 +34,12 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+const updock = Updock({ 
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-updock',
 });
 
 export const metadata: Metadata = {
@@ -26,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${poppins.variable} ${playfair.variable} ${lato.variable} ${updock.variable} antialiased`}
       >
         {children}
       </body>
