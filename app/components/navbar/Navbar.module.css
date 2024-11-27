@@ -70,7 +70,7 @@
 .title {
     color: #f5cfad;
     font-size: 8rem;
-    margin-top: 3rem;
+    margin-top: 12rem;
     font-family: 'Updock', cursive;
     text-align: center;
     font-weight: bold;
@@ -99,7 +99,7 @@
     position: relative;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
                  0 0 20px rgba(226, 172, 125, 0.5);
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     padding: 0.5rem 2rem;
     border-top: 2px solid rgba(226, 172, 125, 0.3);
     border-bottom: 2px solid rgba(226, 172, 125, 0.3);
@@ -143,41 +143,36 @@
     .navbar {
         min-height: 100vh;
         padding: 1rem;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     .navButtons {
         position: fixed;
         top: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 600px;
+        padding: 5px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 5px;
+        box-sizing: border-box;
         z-index: 100;
-        transition: opacity 0.3s ease;
-    }
-
-    .navButtons.hidden {
-        opacity: 0;
-        pointer-events: none;
     }
 
     .navButton {
-        font-size: 1.2rem;
-        padding: 0.3rem;
-    }
-
-    .logo {
-        width: 80px;
-        height: 80px;
-        margin: 4rem 0 1rem 0;
+        font-size: 0.85rem;
+        padding: 5px 8px;
+        margin: 0;
+        white-space: nowrap;
     }
 
     .title {
         font-size: 4.5rem;
-        margin-top: 1rem;
+        margin-top: 8rem;
         margin-bottom: 0.5rem;
         transform: rotate(-3deg);
     }
@@ -185,7 +180,7 @@
     .subtitle {
         font-size: 1.5rem;
         letter-spacing: 0.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
         padding: 0.3rem 1rem;
     }
 
@@ -197,38 +192,44 @@
 
 @media screen and (max-width: 480px) {
     .navbar {
-        padding: 0.5rem;
+        padding: 0;
+        overflow-x: hidden;
     }
 
     .navButtons {
-        flex-wrap: wrap;
-        padding: 0.3rem;
+        padding: 5px;
+        width: 90%;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
     }
 
     .navButton {
-        font-size: 1rem;
-        padding: 0.2rem;
-    }
-
-    .logo {
-        width: 60px;
-        height: 60px;
-        margin-top: 3.5rem;
+        font-size: 0.9rem;
+        padding: 8px 5px;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        background: none;
+        color: white;
     }
 
     .title {
         font-size: 3.5rem;
-        transform: rotate(-2deg);
+        margin-top: 12rem;
     }
 
     .subtitle {
         font-size: 1.2rem;
         letter-spacing: 0.3rem;
-        padding: 0.2rem 0.8rem;
+        margin-bottom: 2rem;
+        padding: 0.3rem;
     }
 
     .button {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         padding: 0.3rem 1.2rem;
     }
 }
