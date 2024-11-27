@@ -27,8 +27,9 @@
 
 .navButtons {
     position: absolute;
-    left: 2rem;
+    left: 50%;
     top: 2rem;
+    transform: translateX(-50%);
     display: flex;
     gap: 1.5rem;
     z-index: 2;
