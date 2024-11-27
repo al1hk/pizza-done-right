@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react"
 import styles from "./Navbar.module.css"
-import Image from "next/image"
 
 export default function Navbar() {
     const [showNav, setShowNav] = useState(true);
@@ -38,13 +37,6 @@ export default function Navbar() {
                 <button onClick={() => scrollToSection('hours')} className={styles.navButton}>Hours</button>
                 <button onClick={() => scrollToSection('contact')} className={styles.navButton}>Contact Us</button>
             </div>
-            <Image 
-                src="/assets/Black and White Flat Illustrative Pizza Logo.png" 
-                alt="logo" 
-                width={100}
-                height={100}
-                className={styles.logo}
-            />
             <h1 className={styles.title}>Pizza</h1>
             <h1 className={styles.subtitle}>D O N E  R I G H T</h1>
             <button onClick={() => scrollToSection('specials')} className={styles.button}>Get Started</button>
